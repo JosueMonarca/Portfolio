@@ -22,10 +22,9 @@ jobs:
         with:
           node-version: 22
 
-      - name: Instalar pnpm 9
+      - name: Instalar pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
+        # Ya no ponemos la versión aquí, la leerá automáticamente de tu package.json
 
       - name: Instalar dependencias
         run: pnpm install
