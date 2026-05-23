@@ -14,25 +14,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # actions/checkout@v4.1.7
       - name: Checkout your repository using git
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@v4
 
-      # actions/setup-node@v4.0.3
       - name: Setup Node.js
-        uses: actions/setup-node@60a0d83039c74a4aee543508d2ffcb1c3799cdea
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # pnpm/action-setup@v3.0.0
       - name: Install pnpm
-        uses: pnpm/action-setup@a3c05ce857aab374fe756157f3a8bf73b064d509
+        uses: pnpm/action-setup@v3
         with:
           version: latest
 
-      # withastro/action@v3.1.0
       - name: Install, build, and upload your site
-        uses: withastro/action@91ec346f1ecda6d2146ff9b2a75908b9fdf9cf99
+        uses: withastro/action@v3
         
   deploy:
     needs: build
@@ -41,7 +37,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # actions/deploy-pages@v4.0.5
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90157736ad386b7355da4c17b46ec29e1190
+        uses: actions/deploy-pages@v4
