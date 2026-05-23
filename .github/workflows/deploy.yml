@@ -16,13 +16,20 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # Aquí forzamos el uso de Node 22 de forma correcta
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest # Configuramos pnpm explícitamente ya que usas pnpm-lock.yaml
+
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        with:
-          node-version: 22 # <-- ESTA ES LA SOLUCIÓN AL ERROR
-          package-manager: pnpm@latest # Ayuda a que detecte tu pnpm-lock.yaml más rápido
-          
+        
   deploy:
     needs: build
     runs-on: ubuntu-latest
