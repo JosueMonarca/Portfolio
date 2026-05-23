@@ -16,12 +16,19 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        
+        with:
+          node-version: 22 # <-- ESTA ES LA SOLUCIÓN AL ERROR
+          package-manager: pnpm@latest # Ayuda a que detecte tu pnpm-lock.yaml más rápido
+          
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
