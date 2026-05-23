@@ -24,8 +24,7 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9 # <-- Aquí está la solución al error rojo
+        # Eliminamos la etiqueta 'with: version' porque ahora lo lee del package.json
 
       - name: Install, build, and upload your site
         uses: withastro/action@v3
