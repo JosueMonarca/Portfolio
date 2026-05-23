@@ -2,7 +2,7 @@
 
 Welcome to this Astro portfolio project built with Astro and Tailwind CSS. It is designed to showcase a personal page with sections for experience, skills, and social links.
 
-## ✨ What this project includes
+##  What this project includes
 
 - Static website built with `Astro`.
 - Styling with `Tailwind CSS` and variable fonts using `@fontsource-variable/onest`.
@@ -11,7 +11,7 @@ Welcome to this Astro portfolio project built with Astro and Tailwind CSS. It is
 - Home page in `src/pages/index.astro`.
 - Static assets in `public/`.
 
-## 🗂️ Main project structure
+##  Main project structure
 
 ```text
 .
@@ -40,7 +40,7 @@ Welcome to this Astro portfolio project built with Astro and Tailwind CSS. It is
 └── README.md
 ```
 
-## 🚀 Available commands
+##  Available commands
 
 Run these commands from the project root:
 
@@ -52,21 +52,21 @@ Run these commands from the project root:
 | `pnpm preview` | Previews the built site locally |
 | `pnpm astro -- --help` | Shows help for the Astro CLI |
 
-## ⚙️ Key dependencies
+##  Key dependencies
 
 - `astro` - framework for fast, static websites.
 - `tailwindcss` - utility-first CSS framework.
 - `@tailwindcss/vite` - Tailwind integration for Vite.
 - `@fontsource-variable/onest` - variable font support.
 
-## 💡 How to contribute
+##  How to contribute
 
 1. Clone the repository.
 2. Run `pnpm install`.
 3. Edit components in `src/components` or the home page in `src/pages/index.astro`.
 4. Test your changes with `pnpm dev`.
 
-## 📌 Notes
+##  Notes
 
 - Make sure you are using Node.js `>=22.12.0`.
 - To change the content or visual identity, edit `src/styles/global.css` and the existing components.
